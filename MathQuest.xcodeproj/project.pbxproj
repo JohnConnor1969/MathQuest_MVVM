@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		97746E1124E98BA300691BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E1024E98BA300691BC0 /* AppDelegate.swift */; };
 		97746E1324E98BA300691BC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E1224E98BA300691BC0 /* SceneDelegate.swift */; };
-		97746E1524E98BA300691BC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E1424E98BA300691BC0 /* ViewController.swift */; };
+		97746E1524E98BA300691BC0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E1424E98BA300691BC0 /* GameViewController.swift */; };
 		97746E1824E98BA300691BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97746E1624E98BA300691BC0 /* Main.storyboard */; };
 		97746E1A24E98BA700691BC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97746E1924E98BA700691BC0 /* Assets.xcassets */; };
 		97746E1D24E98BA700691BC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97746E1B24E98BA700691BC0 /* LaunchScreen.storyboard */; };
+		97746E2724E98C8F00691BC0 /* GameViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E2624E98C8F00691BC0 /* GameViewControllerViewModel.swift */; };
+		97746E2924E98C9A00691BC0 /* GameViewControllerViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E2824E98C9A00691BC0 /* GameViewControllerViewModelProtocol.swift */; };
+		97746E2E24E98D0A00691BC0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E2D24E98D0A00691BC0 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		97746E0D24E98BA300691BC0 /* MathQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97746E1024E98BA300691BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97746E1224E98BA300691BC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		97746E1424E98BA300691BC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		97746E1424E98BA300691BC0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		97746E1724E98BA300691BC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97746E1924E98BA700691BC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97746E1C24E98BA700691BC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97746E1E24E98BA700691BC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97746E2624E98C8F00691BC0 /* GameViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerViewModel.swift; sourceTree = "<group>"; };
+		97746E2824E98C9A00691BC0 /* GameViewControllerViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerViewModelProtocol.swift; sourceTree = "<group>"; };
+		97746E2D24E98D0A00691BC0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		97746E0F24E98BA300691BC0 /* MathQuest */ = {
 			isa = PBXGroup;
 			children = (
-				97746E1024E98BA300691BC0 /* AppDelegate.swift */,
-				97746E1224E98BA300691BC0 /* SceneDelegate.swift */,
-				97746E1424E98BA300691BC0 /* ViewController.swift */,
-				97746E1624E98BA300691BC0 /* Main.storyboard */,
-				97746E1924E98BA700691BC0 /* Assets.xcassets */,
-				97746E1B24E98BA700691BC0 /* LaunchScreen.storyboard */,
-				97746E1E24E98BA700691BC0 /* Info.plist */,
+				97746E2B24E98CD800691BC0 /* Model */,
+				97746E2A24E98CA200691BC0 /* GameViewController */,
+				97746E2524E98C4700691BC0 /* View */,
+				97746E2C24E98CE000691BC0 /* Managers */,
+				97746E2424E98C3100691BC0 /* Supporting */,
 			);
 			path = MathQuest;
+			sourceTree = "<group>";
+		};
+		97746E2424E98C3100691BC0 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				97746E1024E98BA300691BC0 /* AppDelegate.swift */,
+				97746E1224E98BA300691BC0 /* SceneDelegate.swift */,
+				97746E1924E98BA700691BC0 /* Assets.xcassets */,
+				97746E1E24E98BA700691BC0 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		97746E2524E98C4700691BC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				97746E1624E98BA300691BC0 /* Main.storyboard */,
+				97746E1B24E98BA700691BC0 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		97746E2A24E98CA200691BC0 /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				97746E1424E98BA300691BC0 /* GameViewController.swift */,
+				97746E2624E98C8F00691BC0 /* GameViewControllerViewModel.swift */,
+				97746E2824E98C9A00691BC0 /* GameViewControllerViewModelProtocol.swift */,
+				97746E2D24E98D0A00691BC0 /* Task.swift */,
+			);
+			path = GameViewController;
+			sourceTree = "<group>";
+		};
+		97746E2B24E98CD800691BC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		97746E2C24E98CE000691BC0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +187,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97746E1524E98BA300691BC0 /* ViewController.swift in Sources */,
+				97746E1524E98BA300691BC0 /* GameViewController.swift in Sources */,
+				97746E2924E98C9A00691BC0 /* GameViewControllerViewModelProtocol.swift in Sources */,
 				97746E1124E98BA300691BC0 /* AppDelegate.swift in Sources */,
 				97746E1324E98BA300691BC0 /* SceneDelegate.swift in Sources */,
+				97746E2E24E98D0A00691BC0 /* Task.swift in Sources */,
+				97746E2724E98C8F00691BC0 /* GameViewControllerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3H58KDA5;
-				INFOPLIST_FILE = MathQuest/Info.plist;
+				INFOPLIST_FILE = MathQuest/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3Y3H58KDA5;
-				INFOPLIST_FILE = MathQuest/Info.plist;
+				INFOPLIST_FILE = MathQuest/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
