@@ -11,9 +11,10 @@ import Foundation
 class TaskManager {
     static let shared = TaskManager()
     
-    func createTask(level: Int, tasksValue: Int) -> Task {
+    func createTask() -> Task {
         var arg1: Int!
         var arg2: Int!
+        let level = 1
         
         let minValue = level * Int(5 * 0.3)
         let maxValue = level * 5
