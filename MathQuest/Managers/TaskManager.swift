@@ -10,7 +10,7 @@ import Foundation
 
 class TaskManager {
     static let shared = TaskManager()
-    
+        
     func createTask() -> Task {
         var arg1: Int!
         var arg2: Int!

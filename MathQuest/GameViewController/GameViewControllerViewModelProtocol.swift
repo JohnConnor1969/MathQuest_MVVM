@@ -8,4 +8,17 @@
 
 import Foundation
 
-
+protocol GameViewControllerViewModelProtocol {
+    var question: String { get }
+    var answer: String { get }
+    
+    init(task: Task)
+    
+    func nextTask()
+        
+    func returnKeyboardNumberArray() -> [Int]
+    
+    func changeHardLevel(level: Int)
+    
+    func readHardLevel() -> Int
+}

@@ -7,3 +7,36 @@
 //
 
 import Foundation
+
+class GameViewControllerViewModel: GameViewControllerViewModelProtocol {
+    
+    private var task: Task!
+    
+    var question: String {
+        return task.question
+    }
+    
+    var answer: String {
+        return task.anwser
+    }
+    
+    required init(task: Task) {
+        self.task = task
+    }
+    
+    func nextTask() {
+        task = TaskManager.shared.createTask()
+    }
+    
+    func returnKeyboardNumberArray() -> [Int] {
+        return KeyboardManager.shared.keyboardNumberInLine.shuffled()
+    }
+    
+    func changeHardLevel(level: Int) {
+        UserDefManager.shared.saveHardLevel(level: level)
+    }
+    
+    func readHardLevel() -> Int {
+        return UserDefManager.shared.readHardLevel()
+    }
+}
