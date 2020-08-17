@@ -34,7 +34,7 @@ class GameViewController: UIViewController {
     // MARK: - IB Action
     
     @IBAction func hardLevelChanged(_ sender: UISegmentedControl) {
-        viewModel.changeHardLevel(level: sender.selectedSegmentIndex)
+        viewModel.changeKeyboardType(level: sender.selectedSegmentIndex)
         setupKeyboard()
     }
     
@@ -117,7 +117,7 @@ class GameViewController: UIViewController {
             button.backgroundColor = buttonColor
         }
         
-        hardLevel.selectedSegmentIndex = viewModel.readHardLevel()
+        hardLevel.selectedSegmentIndex = viewModel.readKeyboardType()
     }
     
     private func setupKeyboard() {
@@ -138,7 +138,5 @@ class GameViewController: UIViewController {
         questionLabel.text = self.viewModel.question
         clearAnswer()
     }
-    
-    
 }
 

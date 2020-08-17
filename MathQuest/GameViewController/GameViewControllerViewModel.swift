@@ -29,7 +29,7 @@ class GameViewControllerViewModel: GameViewControllerViewModelProtocol {
     }
     
     func returnKeyboardNumberArray() -> [Int] {
-        let level = readHardLevel()
+        let level = readKeyboardType()
         
         switch level {
         case 0:
@@ -39,17 +39,13 @@ class GameViewControllerViewModel: GameViewControllerViewModelProtocol {
         default:
             return KeyboardManager.shared.keyboardNumberInLine
         }
-        
-        
-        
-        
     }
     
-    func changeHardLevel(level: Int) {
-        UserDefManager.shared.saveHardLevel(level: level)
+    func changeKeyboardType(level: Int) {
+        UserDefManager.shared.saveKeyboardType(level: level)
     }
     
-    func readHardLevel() -> Int {
-        return UserDefManager.shared.readHardLevel()
+    func readKeyboardType() -> Int {
+        return UserDefManager.shared.readKeyboardType()
     }
 }

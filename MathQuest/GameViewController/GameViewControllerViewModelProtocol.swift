@@ -18,7 +18,7 @@ protocol GameViewControllerViewModelProtocol {
         
     func returnKeyboardNumberArray() -> [Int]
     
-    func changeHardLevel(level: Int)
+    func changeKeyboardType(level: Int)
     
-    func readHardLevel() -> Int
+    func readKeyboardType() -> Int
 }

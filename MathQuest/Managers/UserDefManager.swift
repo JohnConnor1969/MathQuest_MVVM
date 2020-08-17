@@ -12,13 +12,22 @@ class UserDefManager {
     
     static let shared = UserDefManager()
     
-    func readHardLevel() -> Int {
-        let level = UserDefaults().integer(forKey: "hardLevel")
-        return level
+    func readKeyboardType() -> Int {
+        let type = UserDefaults().integer(forKey: "keyboardType")
+        return type
     }
     
-    func saveHardLevel(level: Int) {
-        UserDefaults().set(level, forKey: "hardLevel")
+    func saveKeyboardType(type: Int) {
+        UserDefaults().set(type, forKey: "keyboardType")
     }
+    
+//    func readCurrentLevel() -> Int {
+//        let level = UserDefaults().integer(forKey: "currentLevel")
+//        return level
+//    }
+//
+//    func saveCurrentLevel(level: Int) {
+//        UserDefaults().set(level, forKey: "currentLevel")
+//    }
     
 }
