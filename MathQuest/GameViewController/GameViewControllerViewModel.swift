@@ -29,7 +29,20 @@ class GameViewControllerViewModel: GameViewControllerViewModelProtocol {
     }
     
     func returnKeyboardNumberArray() -> [Int] {
-        return KeyboardManager.shared.keyboardNumberInLine.shuffled()
+        let level = readHardLevel()
+        
+        switch level {
+        case 0:
+            return KeyboardManager.shared.keyboardNumberInLine
+        case 1:
+            return KeyboardManager.shared.keyboardNumberInLine.shuffled()
+        default:
+            return KeyboardManager.shared.keyboardNumberInLine
+        }
+        
+        
+        
+        
     }
     
     func changeHardLevel(level: Int) {

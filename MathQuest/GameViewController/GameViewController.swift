@@ -35,6 +35,7 @@ class GameViewController: UIViewController {
     
     @IBAction func hardLevelChanged(_ sender: UISegmentedControl) {
         viewModel.changeHardLevel(level: sender.selectedSegmentIndex)
+        setupKeyboard()
     }
     
 
@@ -75,14 +76,18 @@ class GameViewController: UIViewController {
         
          if answerLabel.text == viewModel.answer {
              
-             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                  
                 self.nextTask()
-             }
+            }
+            
+            if hardLevel.selectedSegmentIndex == 1 {
+                setupKeyboard()
+            }
              
-             let generator = UIImpactFeedbackGenerator(style: .heavy)
-             generator.prepare()
-             generator.impactOccurred()
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.prepare()
+            generator.impactOccurred()
          }
          
     }
@@ -112,7 +117,6 @@ class GameViewController: UIViewController {
             button.backgroundColor = buttonColor
         }
         
-        hardLevel.isEnabled = appIsOn
         hardLevel.selectedSegmentIndex = viewModel.readHardLevel()
     }
     

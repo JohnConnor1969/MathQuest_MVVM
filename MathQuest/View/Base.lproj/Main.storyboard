@@ -32,12 +32,13 @@
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TF3-CN-Jl5">
                                                         <rect key="frame" x="0.0" y="25.5" width="288" height="29"/>
+                                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="28" id="hj1-68-4SR"/>
                                                         </constraints>
                                                         <segments>
-                                                            <segment title="Просто"/>
-                                                            <segment title="Сложно"/>
+                                                            <segment title="Простой"/>
+                                                            <segment title="Сложный"/>
                                                         </segments>
                                                         <connections>
                                                             <action selector="hardLevelChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="huq-Rm-Yjb"/>

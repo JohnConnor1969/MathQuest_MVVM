@@ -19,7 +19,6 @@
 		97746E3024E9962100691BC0 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E2F24E9962100691BC0 /* TaskManager.swift */; };
 		97746E3224E9B15A00691BC0 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E3124E9B15A00691BC0 /* KeyboardManager.swift */; };
 		97746E3424EA544C00691BC0 /* UserDefManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E3324EA544C00691BC0 /* UserDefManager.swift */; };
-		97746E3624EA594200691BC0 /* FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97746E3524EA594200691BC0 /* FirstLaunch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +36,6 @@
 		97746E2F24E9962100691BC0 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		97746E3124E9B15A00691BC0 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		97746E3324EA544C00691BC0 /* UserDefManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefManager.swift; sourceTree = "<group>"; };
-		97746E3524EA594200691BC0 /* FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +121,6 @@
 				97746E2F24E9962100691BC0 /* TaskManager.swift */,
 				97746E3124E9B15A00691BC0 /* KeyboardManager.swift */,
 				97746E3324EA544C00691BC0 /* UserDefManager.swift */,
-				97746E3524EA594200691BC0 /* FirstLaunch.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -204,7 +201,6 @@
 				97746E1124E98BA300691BC0 /* AppDelegate.swift in Sources */,
 				97746E3424EA544C00691BC0 /* UserDefManager.swift in Sources */,
 				97746E1324E98BA300691BC0 /* SceneDelegate.swift in Sources */,
-				97746E3624EA594200691BC0 /* FirstLaunch.swift in Sources */,
 				97746E3224E9B15A00691BC0 /* KeyboardManager.swift in Sources */,
 				97746E2E24E98D0A00691BC0 /* TaskModel.swift in Sources */,
 				97746E3024E9962100691BC0 /* TaskManager.swift in Sources */,
