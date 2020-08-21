@@ -10,22 +10,21 @@ import Foundation
 
 class TaskManager {
     static let shared = TaskManager()
-        
+    
     func createTask() -> Task {
-        var arg1: Int!
-        var arg2: Int!
         
-        let level = 1
+        //let level = 1
+        //let minValue = level * Int(5 * 0.3)
+        //let maxValue = level * 5
+        let minValue = 2
+        let maxValue = 9
         
-        let minValue = level * Int(5 * 0.3)
-        let maxValue = level * 5
-                
-        let action = Int.random(in: 1...4)
+        let action = getRandomInt(minValue: 1, maxValue: 4)
         
-        arg1 = getRandomInt(minValue: minValue, maxValue: maxValue)
-        arg2 = getRandomInt(minValue: minValue, maxValue: maxValue)
+        var arg1 = getRandomInt(minValue: minValue, maxValue: maxValue)
+        var arg2 = getRandomInt(minValue: minValue, maxValue: maxValue)
         
-        while (arg1 == arg2) || (arg1 * arg1 > level * 20) {
+        while arg1 == arg2 {
             arg1 = getRandomInt(minValue: minValue, maxValue: maxValue)
             arg2 = getRandomInt(minValue: minValue, maxValue: maxValue)
         }
@@ -49,7 +48,6 @@ class TaskManager {
         default:
             return Task(arg1: 2, arg2: 2, action: "+")
         }
-        
     }
     
     private func getRandomInt(minValue: Int, maxValue: Int) -> Int {

@@ -9,8 +9,8 @@
 import Foundation
 
 class GameViewControllerViewModel: GameViewControllerViewModelProtocol {
-    
     private var task: Task!
+    private var tasks: [Task]!
     
     var question: String {
         return task.question
@@ -41,8 +41,8 @@ class GameViewControllerViewModel: GameViewControllerViewModelProtocol {
         }
     }
     
-    func changeKeyboardType(level: Int) {
-        UserDefManager.shared.saveKeyboardType(level: level)
+    func changeKeyboardType(type: Int) {
+        UserDefManager.shared.saveKeyboardType(type: type)
     }
     
     func readKeyboardType() -> Int {

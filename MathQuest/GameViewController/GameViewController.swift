@@ -15,8 +15,9 @@ class GameViewController: UIViewController {
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel: UILabel!
     @IBOutlet var buttonArray: [UIButton]!
+    @IBOutlet var clearButon: UIButton!
     
-    @IBOutlet var hardLevel: UISegmentedControl!
+    @IBOutlet var keyboardType: UISegmentedControl!
     
     // MARK: - Properties
     
@@ -33,11 +34,10 @@ class GameViewController: UIViewController {
     
     // MARK: - IB Action
     
-    @IBAction func hardLevelChanged(_ sender: UISegmentedControl) {
-        viewModel.changeKeyboardType(level: sender.selectedSegmentIndex)
+    @IBAction func keyboardTypeChanged(_ sender: UISegmentedControl) {
+        viewModel.changeKeyboardType(type: sender.selectedSegmentIndex)
         setupKeyboard()
     }
-    
 
     @IBAction func startAction(_ sender: UIBarButtonItem) {
         setupUI(appIsOn: true)
@@ -81,7 +81,7 @@ class GameViewController: UIViewController {
                 self.nextTask()
             }
             
-            if hardLevel.selectedSegmentIndex == 1 {
+            if keyboardType.selectedSegmentIndex == 1 {
                 setupKeyboard()
             }
              
@@ -90,6 +90,10 @@ class GameViewController: UIViewController {
             generator.impactOccurred()
          }
          
+    }
+    
+    @IBAction func clearButtonAction(_ sender: UIButton) {
+        clearAnswer()
     }
     
     // MARK: - Functions
@@ -117,7 +121,9 @@ class GameViewController: UIViewController {
             button.backgroundColor = buttonColor
         }
         
-        hardLevel.selectedSegmentIndex = viewModel.readKeyboardType()
+        clearButon.backgroundColor = appIsOn ? .red : .lightGray
+        
+        keyboardType.selectedSegmentIndex = viewModel.readKeyboardType()
     }
     
     private func setupKeyboard() {

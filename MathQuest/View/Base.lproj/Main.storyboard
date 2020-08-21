@@ -15,70 +15,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="OgJ-gV-8Yu">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OgJ-gV-8Yu">
                                 <rect key="frame" x="16" y="64" width="288" height="484"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rfV-Qq-SGR">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="222"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="232"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-Bd-kMR">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="55.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="49.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keyboard type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKz-ZJ-u1d">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="27.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TF3-CN-Jl5">
-                                                        <rect key="frame" x="0.0" y="27.5" width="288" height="29"/>
+                                                        <rect key="frame" x="0.0" y="17.5" width="288" height="33"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="28" id="hj1-68-4SR"/>
+                                                            <constraint firstAttribute="height" constant="32" id="hj1-68-4SR"/>
                                                         </constraints>
                                                         <segments>
                                                             <segment title="Lined"/>
                                                             <segment title="Shuffled"/>
                                                         </segments>
                                                         <connections>
-                                                            <action selector="hardLevelChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="huq-Rm-Yjb"/>
+                                                            <action selector="keyboardTypeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="huq-Rm-Yjb"/>
                                                         </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-F2-XgB">
-                                                <rect key="frame" x="0.0" y="67.5" width="288" height="91.5"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="288" height="75"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="65"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="xEb-ut-Exs">
-                                                <rect key="frame" x="0.0" y="171" width="288" height="51"/>
+                                                <rect key="frame" x="0.0" y="148.5" width="288" height="38.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caH-e5-h5h">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="51"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="38.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lMK-BU-b8I">
-                                                        <rect key="frame" x="160.5" y="0.0" width="127.5" height="51"/>
+                                                        <rect key="frame" x="160.5" y="0.0" width="127.5" height="38.5"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQo-WV-KVd">
+                                                <rect key="frame" x="0.0" y="199" width="288" height="33"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <state key="normal" title="Clear answer">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clearButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mf1-u9-P7b"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="poh-L6-1dU">
-                                        <rect key="frame" x="0.0" y="262" width="288" height="222"/>
+                                        <rect key="frame" x="0.0" y="252" width="288" height="232"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="otG-l2-FEb">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="46.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xU-qa-km4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="A">
@@ -89,7 +100,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7v-7E-4Am">
-                                                        <rect key="frame" x="100" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="100" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="B">
@@ -100,7 +111,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2r-dA-rRr">
-                                                        <rect key="frame" x="200" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="200" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="C">
@@ -113,10 +124,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fs4-NN-jbl">
-                                                <rect key="frame" x="0.0" y="58.5" width="288" height="46.5"/>
+                                                <rect key="frame" x="0.0" y="61" width="288" height="49"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i52-vK-JEP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="D">
@@ -127,7 +138,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gU-4m-RHj">
-                                                        <rect key="frame" x="100" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="100" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="E">
@@ -138,7 +149,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggr-Ab-gL7">
-                                                        <rect key="frame" x="200" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="200" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="F">
@@ -151,10 +162,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EFB-V1-1X1">
-                                                <rect key="frame" x="0.0" y="117" width="288" height="46.5"/>
+                                                <rect key="frame" x="0.0" y="122" width="288" height="49"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAm-6M-XVK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="G">
@@ -165,7 +176,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBW-KV-taa">
-                                                        <rect key="frame" x="100" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="100" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="H">
@@ -176,7 +187,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="liQ-aE-xD6">
-                                                        <rect key="frame" x="200" y="0.0" width="88" height="46.5"/>
+                                                        <rect key="frame" x="200" y="0.0" width="88" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="I">
@@ -189,10 +200,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="N5k-rc-vHN">
-                                                <rect key="frame" x="0.0" y="175.5" width="288" height="46.5"/>
+                                                <rect key="frame" x="0.0" y="183" width="288" height="49"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaC-Tt-ktF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="46.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="49"/>
                                                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="33"/>
                                                         <state key="normal" title="G">
@@ -249,7 +260,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerLabel" destination="lMK-BU-b8I" id="Mst-gO-Ohf"/>
-                        <outlet property="hardLevel" destination="TF3-CN-Jl5" id="MVD-zq-Ak0"/>
+                        <outlet property="clearButon" destination="qQo-WV-KVd" id="g54-Q6-3hb"/>
+                        <outlet property="keyboardType" destination="TF3-CN-Jl5" id="MVD-zq-Ak0"/>
                         <outlet property="questionLabel" destination="gJe-F2-XgB" id="3bp-hD-ZJs"/>
                         <outletCollection property="buttonArray" destination="8xU-qa-km4" collectionClass="NSMutableArray" id="VKs-42-dXR"/>
                         <outletCollection property="buttonArray" destination="h7v-7E-4Am" collectionClass="NSMutableArray" id="GHc-0r-INu"/>
